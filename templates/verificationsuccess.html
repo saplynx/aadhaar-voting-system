@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="bg1">
+        <div class="heading1">
+            <div align="center" class="font1">Verification</div>
+        </div>
+    </div>
+
+    <div class="bg2">
+        <div class="main2">
+            <div align="center">
+                {% if p_message %}
+                    {{ p_message }}
+                {% endif %}
+            </div>
+            <br>
+            <form method=POST>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-success" onclick="" value="Proceed">Proceed</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

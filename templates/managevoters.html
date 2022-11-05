@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Voters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Manage Voters</a>
+            <a href="{{url_for('adminpage')}}">
+              <button type="button" class="btn btn-warning">Go Back</button>
+            </a>
+        </div>
+        </div>
+    </nav>
+
+    <br><br>
+
+    <div class="container-fluid">
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Aadhaar Number</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if p_voters %}
+            <form method=POST>
+                {% for voter in p_voters %}
+                    <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{voter.aadhaar_no}}</td>
+                    <td>{{voter.first_name}}</td>
+                    <td>{{voter.last_name}}</td>
+                    <td>{{voter.dob.strftime("%d-%m-%Y")}}</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                    </tr>
+                {% endfor %}
+            </form>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+</body>
+
+</html>

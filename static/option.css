@@ -1,0 +1,16 @@
+.option{
+    /*padding:top right bottom left;*/
+    padding:20px 40px 20px 40px;
+    border-radius: 8px;
+    border: solid black;
+    border-width: 1px;
+    font-size:20px ;
+    background-color: white;
+    transition-duration: 0.2s;
+    width: 100%;
+    
+}
+.option:hover{
+    background-color: lightgray;
+    color: black;
+}

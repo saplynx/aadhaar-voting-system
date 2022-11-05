@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='option.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <a href="{{url_for('admin')}}">
+                <button type="button" class="btn btn-warning">Logout</button>
+            </a>
+        </div>
+        </div>
+    </nav>
+
+    <br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="{{url_for('setcurrentcampaign')}}">
+                                <button class="option" onclick="">Select Current Campaign</button>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ url_for('createcampaign') }}">
+                                <button class="option" onclick="">Create New Campaign</button>
+                                </a>
+                            </li>
+                            {% if p_campaigns %}
+                                {% for campaign in p_campaigns %}
+                                    <li class="list-group-item">
+                                        <button class="option" onclick="">Manage Campaign: #{{campaign.campaign_id}} "{{campaign.campaign_name}}"</button>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="{{ url_for('newvoter') }}">
+                                <button class="option" onclick="">Enroll New Voter</button>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ url_for('managevoters') }}">
+                                <button class="option" onclick="">Manage Existing Voters</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

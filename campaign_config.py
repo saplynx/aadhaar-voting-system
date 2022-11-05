@@ -1,0 +1,1 @@
+current_campaign_id = 1

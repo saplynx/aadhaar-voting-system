@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(233, 252, 255);
+}
+.heading1{
+    padding-top:5%;
+    padding-bottom: 5%;
+    color: rgb(4, 81, 133);
+    
+}
+.main{
+    margin: 5% 30% 20% 30%;
+    border: solid rgb(19, 139, 252);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 3px rgb(132, 158, 170);
+    background-color: white;
+    
+}
+.bg1{
+    margin-top: 3%;
+    margin-left:16%;
+    margin-right:16%;
+    background-color: rgb(214, 246, 248);
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.bg2{
+    margin-left:16%;
+    margin-right:16%;
+    margin-bottom: 0%;
+    background-color: rgb(181, 220, 223);
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.font1{
+    font-size: 35px;
+}
+.main2{
+    margin: 5% 20% 5% 20%;
+    border: solid rgb(19, 139, 252);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 3px rgb(132, 158, 170);
+    background-color: white;
+}
+.buttons{
+    margin: 0 40% 0 40%;
+    padding-bottom: 30px;
+}
+.border{
+    border:double black;
+}
+.main3{
+    margin: 5% 20% 5% 20%;
+    border: solid rgb(19, 139, 252);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 3px rgb(132, 158, 170);
+    background-color: white;
+}

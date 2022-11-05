@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='submit.js') }}"></script>
+</head>
+
+<body onload="reloadpage()">
+
+    <div class="bg1 border">
+        <div class="heading1">
+            <h1 align="center">RESULT</h1>
+        </div>
+    </div>
+
+    <div class="bg2 border">
+        <div class="main3">
+
+          {% if p_results %}
+            <table class="table">
+
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">No. of Votes</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  {% for result in p_results %}
+
+                  <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{result.name}}</td>
+                    <td>{{result.votes}}</td>  
+                  </tr>
+
+                  {% endfor %}
+
+                </tbody>
+
+            </table>
+
+          {% endif %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>
